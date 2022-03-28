@@ -8,9 +8,7 @@ export const ProjectSchema = new Schema(
     creatorId: { type: Schema.Types.ObjectId, ref: 'Account', required: true },
     storyTags: { type: String, required: true },
     originalMp3: { type: String, required: true },
-    storyArt: { type: String },
-    mp3Name: { type: String, required: true },
-    artName: { type: String, required: true }
+    storyArt: { type: String, required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )
