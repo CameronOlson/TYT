@@ -2,11 +2,20 @@ import { profileService } from '../services/ProfileService.js'
 import BaseController from '../utils/BaseController'
 
 export class ProfilesController extends BaseController {
-  constructor() {
+  constructor () {
     super('api/profiles')
     this.router
       .get('', this.getProfiles)
       .get('/:id', this.getProfile)
+      .get('/:id/stories', this.getStoriesByProfileId)
+  }
+
+  getStoriesByProfileId(req, res, next) {
+    try {
+      res.send()
+    } catch (error) {
+      next(error)
+    }
   }
 
   async getProfiles(req, res, next) {
